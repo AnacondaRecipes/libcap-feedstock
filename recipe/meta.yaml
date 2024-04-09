@@ -35,5 +35,9 @@ about:
   summary: Implements the user-space interfaces to the POSIX 1003.1e capabilities available in Linux kernels
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/47182
+    reason: Client request
   recipe-maintainers:
+    - ianaobi
     - scopatz
