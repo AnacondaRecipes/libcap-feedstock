@@ -1,13 +1,13 @@
 {% set name = "libcap" %}
-{% set version = "2.69" %}
+{% set version = "2.77" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://mirrors.edge.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-{{ version }}.tar.xz
-  sha256: f311f8f3dad84699d0566d1d6f7ec943a9298b28f714cae3c931dfd57492d7eb
+  url: https://mirrors.edge.kernel.org/pub/linux/libs/security/linux-privs/libcap2/{{ name }}-{{ version }}.tar.xz
+  sha256: 897bc18b44afc26c70e78cead3dbb31e154acc24bee085a5a09079a88dbf6f52
 
 build:
   number: 0
@@ -17,6 +17,7 @@ build:
 
 requirements:
   build:
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - make
     - pkg-config
@@ -33,6 +34,9 @@ about:
   license_family: BSD
   license_file: License
   summary: Implements the user-space interfaces to the POSIX 1003.1e capabilities available in Linux kernels
+  description: Implements the user-space interfaces to the POSIX 1003.1e capabilities available in Linux kernels
+  dev_url: https://git.kernel.org/pub/scm/libs/libcap/libcap.git
+  doc_url: https://man7.org/linux/man-pages/man3/libcap.3.html
 
 extra:
   recipe-maintainers:
