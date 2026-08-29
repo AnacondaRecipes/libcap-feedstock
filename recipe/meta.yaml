@@ -39,5 +39,9 @@ about:
   doc_url: https://man7.org/linux/man-pages/man3/libcap.3.html
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/47182
+    reason: Client request
   recipe-maintainers:
+    - ianaobi
     - scopatz
